@@ -1,3 +1,5 @@
+import { Category } from '@/models/Category';
+import { Product } from '@/models/Product';
 import { createConnection } from 'typeorm';
 
 
@@ -8,6 +10,6 @@ export default createConnection({
   username: 'dev',
   password: 'dev',
   database: 'dev',
-  entities: [],
-  synchronize: true,
+  entities: [Category, Product],
+  synchronize: false,
 });
