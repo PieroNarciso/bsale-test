@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="app">
-      <nav class="navbar shadow-lg flex justify-between">
+      <nav class="navbar flex justify-between">
         <div class="flex-none">
           <span class="text-lg">BSale <span class="hidden sm:inline-block">Test</span></span>
         </div>
@@ -28,7 +28,16 @@
           </button>
         </div>
       </nav>
-      <div class="container"></div>
+      <div class="container mt-4">
+        <div class="flex">
+        <select id="category-list" class="select select-bordered">
+          <option value="all" selected>Categor&iacute;as</option>
+        </select> 
+        </div>
+        <div class="flex flex-wrap justify-center space-y-2" id="container-products">
+        </div>
+
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
