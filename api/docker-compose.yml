@@ -15,15 +15,7 @@ services:
     environment:
       NODE_ENV: development
       CORS_ORIGIN_WHITELIST: http://localhost:3000
-
-  db:
-    container_name: db-bsale-api
-    image: mysql
-    restart: always
-    ports:
-      - 3306:3306
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: dev
-      MYSQL_USER: dev
-      MYSQL_PASSWORD: dev
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE}

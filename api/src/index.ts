@@ -1,5 +1,6 @@
 import express from 'express';
 import 'reflect-metadata';
+import cors from 'cors';
 
 import { globalRouter } from '@/routes';
 import db from '@/config/db';
@@ -9,6 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 /** DB Connection */
 db
