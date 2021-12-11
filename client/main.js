@@ -44,14 +44,25 @@ const showProductCards = (query = '', categoryId = null) => {
   });
 };
 
+const onSearch = () => {
+  const searchInputElement = document.querySelector('#search-input');
+  const selectInputElement = document.querySelector('#category-list');
+
+  if (selectInputElement.value === "all") {
+    showProductCards(searchInputElement.value);
+  } else {
+    showProductCards(searchInputElement.value, selectInputElement.value);
+  }
+}
+
 window.document.addEventListener('DOMContentLoaded', () => {
+
   constructDropdownMenu();
-  document.querySelector('#category-list').addEventListener('change', (event) => {
-    if (event.target.value === "all") {
-      showProductCards();
-    } else {
-      showProductCards('', event.target.value);
-    }
+
+  document.querySelector('#category-list').addEventListener('change', onSearch);
+  document.querySelector('#search-input').addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') onSearch();
   });
+  document.querySelector('#search-btn').addEventListener('click', onSearch);
   showProductCards();
 });
