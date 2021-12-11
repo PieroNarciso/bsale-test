@@ -17,7 +17,7 @@ const showProductCards = (query = '', categoryId = null) => {
   const containerElement = document.querySelector('#container-products');
   getProducts(query, categoryId).then((products) => {
     containerElement.innerHTML = `
-        ${products
+        ${products.length > 0 ? products
           .map(
             (product) =>
               `<div class="card bordered shadow max-w-xs">
@@ -43,7 +43,7 @@ const showProductCards = (query = '', categoryId = null) => {
               </div>
           `
           )
-          .join('')}
+          .join('') : '<p class="text-center mx-auto text-gray-700">No se encontraron productos</p>'}
       `;
   });
 };
