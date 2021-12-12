@@ -2,10 +2,10 @@ import express from 'express';
 import 'reflect-metadata';
 import cors from 'cors';
 
-import { globalRouter } from '@/routes';
-import db from '@/config/db';
+import { globalRouter } from './routes';
+import db from './config/db';
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.json());

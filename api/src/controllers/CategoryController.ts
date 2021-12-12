@@ -1,4 +1,4 @@
-import { Category } from '@/models/Category';
+import { Category } from '../models/Category';
 import { Request, Response } from 'express';
 
 export const queryCategories = async (_: Request, res: Response) => {

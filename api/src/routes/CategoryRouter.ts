@@ -1,4 +1,4 @@
-import { queryCategories } from '@/controllers/CategoryController';
+import { queryCategories } from '../controllers/CategoryController';
 import { Router } from 'express';
 
 const router = Router();

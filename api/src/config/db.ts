@@ -1,5 +1,5 @@
-import { Category } from '@/models/Category';
-import { Product } from '@/models/Product';
+import { Category } from '../models/Category';
+import { Product } from '../models/Product';
 import { createConnection } from 'typeorm';
 import { DB_DATABASE, DB_HOST, DB_PASSWORD, DB_USER } from './env';
 
